@@ -16,6 +16,11 @@ const HomeScreen = (props) => {
        onPress={()=> props.navigation.navigate("component")}
         title="Go to componentScreen"
        />
+      <Text style={styles.buttonStyl}></Text>
+       <Button
+       onPress={()=> props.navigation.navigate("imag")}
+        title="Go To ImageScreen"
+       />
 
        <TouchableOpacity style={styles.text} /*onPress={() =>props.navigation.navigate('list')}*/ >
          <Text>hello woeld</Text>

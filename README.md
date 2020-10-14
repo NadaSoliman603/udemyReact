@@ -89,13 +89,13 @@ array of object                           list of frindes
 >listScreen > import FlatList 
 >> const listScreen >> creat an array 
     const frindsListArray = [
-        { name: "frind #1"}
-        { name: "frind #2"}
-        { name: "frind #3"}
-        { name: "frind #4"}
-        { name: "frind #5"}
-        { name: "frind #6"}
-        { name: "frind #7"}
+        { name: "frind #1"},
+        { name: "frind #2"},
+        { name: "frind #3"},
+        { name: "frind #4"},
+        { name: "frind #5"},
+        { name: "frind #6"},
+        { name: "frind #7"},
         { name: "frind #8"}
     ];
 2- we are requier to path  in 'prop' of 'data' the array of data   
@@ -120,4 +120,37 @@ key value should be string
 >we can but kay in  FlatList
 <FlatList KeyExstractor {(array>object>proparity>value) => what we want to ruturn}/>
 
-2- add margineVertical to return text
+# part 7
+2- add margineVertical to return text >> to scrol top and botom
+3- add prop horizontal to FlatList >>>>>  to scrol left and right
+4- add prop showesHorizontalScrollIndicator={fsals} to FlatList >>>>>  to hiedd scrolbar
+
+
+
+# ============================
+    lect 04
+# =============================
+
+# how to navigat betwen multable pages
+
+>>>>>>>>>>> homeScreen> import view and button
+>>>>>>>>>>>but Text and <button onPress={() => consol.log("")} title="string" > in view tage
+>>>>>>>>>>><ToushableOpacity onpress={()=>}><ToutchabeOpacit/> >>>> onclik it fadeout then fadin
+we can put more than one elemant unsid but in button we used title
+
+>>>>>> cost homeScreen = prop=>{}
+onpress =()=>prop.navigation.navigate('')
+
+# ====================================
+    lect 05
+# ====================================
+>>>>>> srce>> screeen >>> creat file (imageScreem.js) >>>add this page to >.app.Js navegator
+>>>>>  homeScreen>>>> creat button navigate to image Screen
+>>>>>>>> src >>>>>creat folder collld commponent >>>> creat file imageDetales.js
+
+>>>>>>>>> HOW show imageDetiles in imageScreen ??
+    >1- imageScreen >> import imageDetailes from "src"
+    >2- <imageDetaile  propThatWeCllInImageDetaile=""/> in cost of imageScreen
+    >3- add images to assets folder
+    >4- imageDetaile >> import Image the use it <Image sorce={requier('path of image')}/>
+    >5- git image sorce from imageScreen > imageDetailes prop
