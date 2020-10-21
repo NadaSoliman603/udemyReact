@@ -154,3 +154,139 @@ onpress =()=>prop.navigation.navigate('')
     >3- add images to assets folder
     >4- imageDetaile >> import Image the use it <Image sorce={requier('path of image')}/>
     >5- git image sorce from imageScreen > imageDetailes prop
+
+
+
+================================================================================================
+# ---------------Lect 06  
+>>>>>>>State Management in React Components
+# ===========================
+
+# part 01 >>>>> State In Components
+>>>>>Prop|To Pass Data From Parent To child|
+>>>>State|tracking a piece of data that's going to change over time inside of our application|
+
+# part 02 >>>>> Creat Counter
+>>>>>> srce>> screeen >>> creat file (CouunterScreen.js) >>>add this page to >.app.Js navegator 
+
+# part 03 04 05 >>>>> State In Action
+>>>>>CouunterScreen.js >>>>> add tow button and text of current Count
+>>>> add var let counter = {0}
+>>>> button >>> onpress counter-- or ++
+>>>>> browser Console  
+    >>>> const coloer = ["red","blue"]
+    coloer[0] >>>>> red
+    coloer[1] >>>>> blue
+   >>>> const  ["colorOne","colorTow"] = coloer
+    colorOne >>>> red 
+>>>> import {useState}  from react
+    const [counter , stCounter] = useState(0)
+>>>> button >>>> onpress {setCountet(conter+1)}
+
+------------------------------------------------------------------------------------------------
+# aprt 06
+>>>>>>>>>>>>>>>>>>>>>>>>
+create random coloers
+>>>>>>>>>>>>>>>>>>>>>>>>
+1-srce>> screeen >>> creat file (ColorScreen.js) >>>add this page to >.app.Js navegator 
+2- add button that will creat color
+3-creat view element with width ,hight, backgroundcolor
+4-creat const randameRgb =()=>{red=math.floor(math.random())*256} >>>green blue
+  return rgb(${red},${green},${blue})
+  >>> call this function in backgroundcolor
+5- import {useState} from react
+6- in const colorScreen >>> const [color,srtColor]=usrState([])
+7-onpress>> setcolor([...color, randomRgb()])
+8- use flatList
+
+# part 08  >> app that change color rgb(red,green,blue)
+1-srce>> screeen >>> creat file (ColorScreen.js) >>>add this page to >.app.Js navegator 
+2-srce>>>> creat file (ColorCounter.js) >>> import it to colorScreen 
+   >>>>> creat text 2button
+3-path props color from colorScreen to Color Counter
+
+------------------------------------------------------------------------------------------------
+# aprt 10
+>>>>>>>>>>>>>>>>>>>>>>>>
+create your  coloer
+>>>>>>>>>>>>>>>>>>>>>>>>
+1-srce>> screeen >>> creat file (SquarScreen.js) >>>add this page to >.app.Js navegator 
+2-srce>>>> creat file (ColorCounter.js) >>> import it to SquarSreen
+2-srce>>>> creat file (ColorCounter.js) >>>>> creat text 2button >>>import it to colorScreen 
+3- insert color in Colorcounter by pass props color from colorScreen to Color Counter   
+***if a child needs to read a state value the parent can pass it ass a prop
+***if a child needs to change a state value the parent can pass it as a callback function to change the state value as a prop
+>>>pass callback function from squarScreen to color counter
+
+4- import{useSyaye}from react
+>>const[red,setred]=useState(0)>>> and blue green
+
+>>>>squarScreen>>callBack funktion
+    --onIncrease{() =>setRed(red+1)}>>>and onDecrease So
+    --consil.log(red)
+>>pass the function>>> as prop ({prop1,prop2,....})
+>>buton onPress={()=>function()}
+
+5- creat view element hieght width backgroundcolor `rgb ($(red),($(blue),($(blue))`
+
+
+inisted of 1 we can add aconst value COLOR_INCREASMENT=number
+
+
+6->>> const squarScreen >>>>>  const setColor(color, change)
+
+//// color === red OR green OR blue
+////change === colorIncreasement=15 Or -15
+if (color === red){
+    if(red + chang>255 ||>or red + change<0){
+        return;
+    }else
+    setRed(red+change)
+}
+
+>>> as this green  and blue 
+>>insert this function 
+
+
+>>>>> use swish case
+switch(color){
+    1- case'red':
+            >if>red + change > 255 >OR>||red + change <0 ? null >do nothing>:>other>        setred(red + change) 
+    return;
+
+    default;>>>not equal anycas
+    return;
+}
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>WE CAN   DO THIS IN OTHER WAY
+ >>Using reducer function >>>> function that mange chang to an object
+    >>Argument#1 >>> Has All Of State In It>>>>>>> {red:0,green:0,blue:0}  >>> 
+        >>1-never change it directry
+        >> we maust always rturn a value  to be used as  Argument#1
+    >>Argument#2 >>> Describes the update We want To DO >>>>{colorToChange:'red', amout:15}
+
+
+>>>import {useReducer} from react
+>>>squarScreen>>>
+    >>>>const reducer= (satat, action ) =>{
+    
+        switch(action.colorToChange){
+            case'red':
+                return{...state >>>{red
+                :0,green:0,blue:0}
+                , red:state.red + action.amount}
+             default:
+                return satte;
+        }
+        ***state >>{red:0, green:0, blue:0}
+        ***action>howToChange Object>>{colorToChange:'red'||"green'||blue,amount:15})=>
+
+   >>>> const[state ,runMyReducer ]=useReducer(reducer, {red:0, green:0, blue:0})
+    ----console.log(sate)>>>>{red:0, green:0, blue:0}
+>>>>onInCrease={()=>runMyReducer(colorToChange:'red' , amount:COLOR_INCREASE)}
+>>>> backgroundColor>>stat.red
+
+const {red, greane, blue} = state;
+
+# use if condition in case
