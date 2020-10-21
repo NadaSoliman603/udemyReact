@@ -290,3 +290,25 @@ switch(color){
 const {red, greane, blue} = state;
 
 # use if condition in case
+# usually by convention we will instead use
+colorTochange >>>> type
+red   >>>>>>>>>>>> change_red
+ ammount >>>>>>>> payload
+
+ ---------------------------------input text screen ---------------------------------------------
+ 1- srce>> screeen >>> creat file (TextScreen.js) >>>add this page to >.app.Js navegator 
+ 2- import TextInput >>> add style 
+                                1=margin 15
+                                2=borderColor black
+                                3=borderWidth 1
+                    
+                    >>> autoCapitalize = 'none'
+                    >>> autocorect =  {false}
+                    >>> value = 'hi'
+3-import useState
+    > TextScreen >const [ name, setName] = useState("")
+                    >>> value = {name}
+                    >>> onChangeText = {newValue => setName(newValue) }
+
+
+                

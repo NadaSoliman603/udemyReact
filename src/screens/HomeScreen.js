@@ -40,6 +40,11 @@ const HomeScreen = (props) => {
         title="Go to Squar Screen"
       />
 
+      <Text style={styles.buttonStyl}></Text>
+      <Button 
+        title="Go To Text Screen"
+        onPress = { () =>props.navigation.navigate('inputScreen')}
+      />
 
        <TouchableOpacity style={styles.text} /*onPress={() =>props.navigation.navigate('list')}*/ >
          <Text>hello woeld</Text>

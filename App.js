@@ -7,7 +7,11 @@ import ImageScreen from "./src/screens/ImageScreen";
 import CouunterScreen from "./src/screens/CouunterScreen";
 import colorScreeen from "./src/screens/ColorScreen";
 import SquarScreen from "./src/screens/SquarScreen";
-import ColorCounter from "./src/commponent/ColorCounter"
+import ColorCounter from "./src/commponent/ColorCounter";
+import TextScreen from "./src/screens/TextScreen";
+import PasswordScreen from "./src/screens/PasswordScreen"
+
+
 
 const navigator = createStackNavigator(
   {
@@ -16,12 +20,14 @@ const navigator = createStackNavigator(
     list: listScreen,
     imag: ImageScreen,
     counter: CouunterScreen,
-    color: colorScreeen ,
     squar: SquarScreen,
-    cou: ColorCounter
+    cou: ColorCounter,
+    color: colorScreeen ,
+    inputScreen: TextScreen,
+    pass: PasswordScreen
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: "pass",
     defaultNavigationOptions: {
       title: "App"
     }
