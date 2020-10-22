@@ -9,8 +9,8 @@ import colorScreeen from "./src/screens/ColorScreen";
 import SquarScreen from "./src/screens/SquarScreen";
 import ColorCounter from "./src/commponent/ColorCounter";
 import TextScreen from "./src/screens/TextScreen";
-import PasswordScreen from "./src/screens/PasswordScreen"
-
+import PasswordScreen from "./src/screens/PasswordScreen";
+import BoxScreen from "./src/screens/boxScreen"
 
 
 const navigator = createStackNavigator(
@@ -24,10 +24,11 @@ const navigator = createStackNavigator(
     cou: ColorCounter,
     color: colorScreeen ,
     inputScreen: TextScreen,
-    pass: PasswordScreen
+    pass: PasswordScreen,
+    box: BoxScreen
   },
   {
-    initialRouteName: "pass",
+    initialRouteName: "Home",
     defaultNavigationOptions: {
       title: "App"
     }

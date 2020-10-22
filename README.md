@@ -311,4 +311,35 @@ red   >>>>>>>>>>>> change_red
                     >>> onChangeText = {newValue => setName(newValue) }
 
 
-                
+# =============================================================================================
+   >> Lect 07
+# ===============
+1-srce>> screeen >>> creat file (BoxScreen.js) >>>add this page to >.app.Js navegator 
+>>>>>Box Object Modle
+   >>>> Hieght &  Width & Space around it ~~~~contint&pading&border&notMargin   (backgroundColor)
+   >>>> Effect The Postion Of Single Element  
+    margin (vertical(top&bottom) || horizontal(right&))
+    padding (vertical || horizontal)
+    borderWidth
+
+>>>>FlexBox
+    >>How siblings laid inside a parent
+    >>Parent
+    >    >>> aliganItem (stretch || flex-start||flex-end||center)
+    >    >>flexDirection (row ||row-revers || column || column-reverse)
+    >    >>justyfyContent (flex-start||flex-end||center||space-betwen||space-around)
+    >
+    >>Child
+        >>flex: number
+        >>alignSelf: (center, strech, flex-Start, flex-end)
+
+>>>>postion(default(relative)) || (abs0lute) >>> ignore siblling
+    >>>top  = 0|| bottom =0     }
+    >                           }...StyleSheet.absloluteFillObject
+    >>> right =0  || left = 0   }
+
+    (abs0lute) >>> ignore siblling
+               >>> apply some flex_box Rule [border & margin & padding]
+    (default(relative)) >>> considering sibling
+                        >>>apply all flex-box Rule
+

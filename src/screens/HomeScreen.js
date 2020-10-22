@@ -4,7 +4,7 @@ import { Text, StyleSheet, View, Button ,TouchableOpacity} from "react-native";
 const HomeScreen = (props) => {
   return (
     console.log(props),
-    <View>
+    <View  style = {{height: 9000}} >
       <Text style={styles.text } >HomeScreen</Text>
       <Button
         onPress={() =>props.navigation.navigate('list') }
@@ -46,6 +46,19 @@ const HomeScreen = (props) => {
         onPress = { () =>props.navigation.navigate('inputScreen')}
       />
 
+      <Text style={styles.buttonStyl}></Text>
+      <Button 
+        title="Go To Password Screen"
+        onPress = { () =>props.navigation.navigate('pass')}
+      />
+
+
+      <Text style={styles.buttonStyl}></Text>
+      <Button 
+        title="Go To Box Screen"
+        onPress = { () =>props.navigation.navigate('box')}
+      />
+
        <TouchableOpacity style={styles.text} /*onPress={() =>props.navigation.navigate('list')}*/ >
          <Text>hello woeld</Text>
          <Text>hello woeld</Text>
@@ -62,7 +75,7 @@ const styles = StyleSheet.create({
     marginVertical: 30
   },
   buttonStyl: {
-    marginVertical: 10
+    marginVertical: 0
   }
 });
 
